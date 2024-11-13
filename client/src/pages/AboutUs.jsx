@@ -21,6 +21,12 @@ function AboutUs() {
               <div className="orbit moon-orbit">
                 <div className="planet moon"></div>
               </div>
+              <div className="orbit jupiter-orbit">
+                <div className="planet jupiter"></div>
+              </div>
+              <div className="orbit saturn-orbit">
+                <div className="planet saturn"></div>
+              </div>
             </div>
           </div>
           <div className="w-full md:w-1/2 md:pl-8">
