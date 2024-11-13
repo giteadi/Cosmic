@@ -16,9 +16,9 @@
     height: 15vw;  /* Height as a percentage of viewport width */
     max-width: 180px;  /* Maximum size */
     max-height: 180px;  /* Maximum size */
-    background: url('../assets/8404887.jpg') center/cover no-repeat;
+    /* background: url('../assets/8404887.jpg') center/cover no-repeat; */
     border-radius: 50%;
-    border: 4px solid #ffffff;  /* Optional border */
+    border: 2px solid #ffffff;  
     object-fit: cover;
     position: relative;
     z-index: 1;
