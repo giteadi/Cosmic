@@ -6,6 +6,7 @@ import PortfolioPage from "./pages/Projects";
 import ServicesPage from "./pages/Service";
 import Navbar from "./components/Nav";
 import ClientLogos from "./pages/ClientLogo";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path='/about' element={<AboutUsPage/>}/>
       <Route path='/projects' element={<PortfolioPage/>}/>
       <Route path='/services' element={<ServicesPage/>}/>
+      <Route path='/blog' element={<BlogPage/>}/>
+
     
      </Routes>
     </div>

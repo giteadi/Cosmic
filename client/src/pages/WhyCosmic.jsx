@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { FaRocket, FaUsers, FaRegHandshake, FaLightbulb, FaDollarSign, FaShieldAlt } from 'react-icons/fa';
+import { FaRocket, FaUsers, FaRegHandshake, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 
 // Styled component for the gradient text
 const GradientText = styled.h2`
@@ -57,7 +57,7 @@ const ServiceCard = styled.div`
 
   .service-icon {
     font-size: 3rem;
-    color: #ff6f61;
+    color: #ffffff; /* Updated to white */
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ff6f61, #8b1e2f);
     border-radius: 50%;
@@ -125,13 +125,27 @@ const ServiceCard = styled.div`
   }
 `;
 
-// Icon array for red-themed icons
+// Icon array for red-themed icons (Replaced FaDollarSign with rupee symbol)
 const icons = [
   <FaRocket />,
   <FaUsers />,
   <FaRegHandshake />,
   <FaLightbulb />,
-  <FaDollarSign />,
+  <div style={{
+    fontSize: '2rem',
+    color: 'white',
+    background: 'linear-gradient(135deg, #ff6f61, #8b1e2f)', // Matching gradient
+    borderRadius: '50%',
+    padding: '1rem',
+    display: 'inline-block',
+    width: '70px', // Oval width
+    height: '50px', // Oval height
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}>
+    ₹
+  </div>, // Rupee symbol inside an oval
   <FaShieldAlt />,
 ];
 
