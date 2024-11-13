@@ -1,97 +1,129 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import bg from "../assets/blue-black-sky-with-stars.jpg";
+
+// Background container with responsive padding
+const BackgroundContainer = styled.div`
+  background-image: url(${bg});  // Use the imported bg variable
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; // Default padding
+  @media (max-width: 768px) {
+    padding: 1rem; // Reduce padding on smaller screens
+  }
+`;
+
+// Form container with backdrop blur and responsive width
+const FormContainer = styled.div`
+  background: rgba(0, 0, 0, 0.7); // Slightly transparent dark overlay
+  backdrop-filter: blur(10px);
+  padding: 1.5rem; // Reduced padding for a smaller form
+  border-radius: 10px;
+  max-width: 500px; // Slightly smaller max-width for the form
+  width: 100%;
+  margin-top: 50px; // Add top margin to avoid touching navbar
+  @media (max-width: 768px) {
+    padding: 1rem; // Further reduce padding for smaller screens
+  }
+`;
 
 const ContactPage = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        contactNumber: '',
-        projectType: '',
-        projectDescription: ''
-    });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    contactNumber: '',
+    projectType: '',
+    projectDescription: ''
+  });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form Data Submitted:', formData);
-        // Here you would typically send this data to a backend or database
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data Submitted:', formData);
+    // Here you would typically send this data to a backend or database
+  };
 
-    return (
-        <div className="py-8 bg-gray-50 text-gray-800">
-            <div className="max-w-screen-md mx-auto">
-                <h2 className="text-3xl font-semibold mb-8 text-center text-gray-900">Get a Quote</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                        <label className="block text-lg text-gray-700">Name</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-700"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-lg text-gray-700">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-700"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-lg text-gray-700">Contact Number</label>
-                        <input
-                            type="tel"
-                            name="contactNumber"
-                            value={formData.contactNumber}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-700"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-lg text-gray-700">Project Type</label>
-                        <select
-                            name="projectType"
-                            value={formData.projectType}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-700"
-                            required
-                        >
-                            <option value="">Select Project Type</option>
-                            <option value="Web Development">Web Development</option>
-                            <option value="App Development">App Development</option>
-                            <option value="SEO">SEO</option>
-                            <option value="Brand Development">Brand Development</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label className="block text-lg text-gray-700">Brief Project Description</label>
-                        <textarea
-                            name="projectDescription"
-                            value={formData.projectDescription}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-700"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <button type="submit" className="w-full bg-blue-600 py-2 px-6 rounded-lg text-white hover:bg-blue-700">
-                            Submit Request
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+  return (
+    <BackgroundContainer>
+      <FormContainer>
+        <h2 className="text-3xl font-semibold mb-6 text-center text-white md:mt-10">Get a Quote</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-lg text-gray-300">Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-500 text-white"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-lg text-gray-300">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-500 text-white"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-lg text-gray-300">Contact Number</label>
+            <input
+              type="tel"
+              name="contactNumber"
+              value={formData.contactNumber}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-500 text-white"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-lg text-gray-300">Project Type</label>
+            <select
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-500 text-white"
+              required
+            >
+              <option value="">Select Project Type</option>
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+              <option value="SEO">SEO</option>
+              <option value="Brand Development">Brand Development</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-lg text-gray-300">Brief Project Description</label>
+            <textarea
+              name="projectDescription"
+              value={formData.projectDescription}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-500 text-white"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit" className="w-full bg-blue-600 py-2 px-6 rounded-lg text-white hover:bg-blue-700">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </FormContainer>
+    </BackgroundContainer>
+  );
 };
 
 export default ContactPage;
