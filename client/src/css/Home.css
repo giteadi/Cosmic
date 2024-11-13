@@ -1,0 +1,30 @@
+.animated-slide {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100px); /* Slide in from the left */
+    animation: slideIn 1s forwards;
+  }
+  
+  .animated-slide.delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .animated-slide.delay-2 {
+    animation-delay: 1s;
+  }
+  
+  .animated-slide.delay-3 {
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
