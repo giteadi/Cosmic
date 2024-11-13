@@ -2,6 +2,7 @@ import React from 'react';
 import AboutUs from './AboutUs';
 import Services from './Service';
 import backgroundImage from '../assets/blue-black-sky-with-stars.jpg';
+import WhyCosmic from './WhyCosmic';
 
 function Home() {
   return (
@@ -28,22 +29,7 @@ function Home() {
       <Services />
 
       {/* Why Cosmic Logic 1 Section */}
-      <section className="py-16 bg-transparent">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-100">Why Cosmic Logic 1</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-            {['Productivity', 'Agile Team', 'Best Services', 'Innovative Work', 'Affordable Price', 'Trusted Support'].map((benefit, index) => (
-              <div key={index} className="p-6 bg-transparent rounded-lg shadow-md">
-                <div className="h-16 w-16 bg-gray-300 mx-auto mb-4 rounded-full"></div> {/* Icon Placeholder */}
-                <h3 className="text-xl font-semibold text-gray-100">{benefit}</h3>
-                <p className="mt-2 text-gray-400 text-sm">
-                  Brief description of why {benefit} is important. Highlight the advantages that Cosmic Logic 1 provides through this feature.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhyCosmic/>
 
       {/* Testimonials Section */}
       <section className="py-16 bg-transparent">
