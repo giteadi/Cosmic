@@ -23,7 +23,8 @@ function Navbar() {
       className={`fixed w-full top-0 z-50 transition-all ease-in-out duration-300 ${isScrolled ? 'bg-indigo-900/80 text-white shadow-lg' : 'bg-transparent text-white'}`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8 py-4">
-        <h1 className="text-xl font-bold transition-transform ease-in-out duration-500 transform hover:scale-110">
+        {/* Logo visible only on medium screens and above */}
+        <h1 className="text-xl font-bold transition-transform ease-in-out duration-500 transform hover:scale-110 md:block hidden">
           <Link to="/">Cosmic Logic 1</Link>
         </h1>
         <nav className={`md:flex space-x-6 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
