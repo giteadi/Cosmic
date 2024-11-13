@@ -16,8 +16,8 @@
     height: 15vw;  /* Height as a percentage of viewport width */
     max-width: 180px;  /* Maximum size */
     max-height: 180px;  /* Maximum size */
-    /* background: url('../assets/8404887.jpg') center/cover no-repeat; */
-    border-radius: 50%;
+    background: url('https://imgs.search.brave.com/60qQIDVuKLVF7YD74DOJU-WiL2LoHYUyHnEDA_rFpGM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC93aW5kb3dz/LWljb24tMjU1eDI1/Ni05MjQ1bTZnNi5w/bmc') center/cover no-repeat;
+    border-radius: 20%;
     border: 2px solid #ffffff;  
     object-fit: cover;
     position: relative;
@@ -76,20 +76,20 @@
 
 /* Earth Styling - Positioned to the right */
 .earth {
-    background: url('../assets/earth.png') center/cover no-repeat;
+    background: url('https://imgs.search.brave.com/th-dlJboNBI5TUGem8JpE3nD2akAvVfGelPBgeXPVfs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9tb25nb2Ri/LWNvbXBhc3MtaWNv/bi0yNTZ4MjU1LTBt/Y2Rnb3h4LnBuZw') center/cover no-repeat;
     left: 50%;  /* Position Earth to the right */
     transform: translateX(50%);  /* Move Earth to the right */
 }
 
 /* Mars Styling - Positioned at the top */
 .mars {
-    background: url('../assets/mars.png') center/cover no-repeat;
+    background: url('https://imgs.search.brave.com/mOCx1bfRkfRFUb4ME2vOJDWNJZ6K0lkAuRM8eXTi4NQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E3L1JlYWN0LWlj/b24uc3Zn') center/cover no-repeat;
     top: -50px;  /* Move Mars to the top */
 }
 
 /* Moon Styling - Positioned to the left */
 .moon {
-    background: url('../assets/moon.png') center/cover no-repeat;
+    background: url('https://imgs.search.brave.com/6dRzQ9yxkEkO6iiL4aSwmaGHUrLYFDxIoHCWt-PtlFk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9ub2RlLWpz/LWljb24tMjI3eDI1/Ni05MTNuYXp0MC5w/bmc') center/cover no-repeat;
     left: -50px;  /* Move Moon to the left */
 }
 
