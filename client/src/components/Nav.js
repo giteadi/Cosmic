@@ -25,7 +25,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8 py-4">
         {/* Logo visible only on medium screens and above */}
         <h1 className="text-xl font-bold transition-transform ease-in-out duration-500 transform hover:scale-110 md:block hidden">
-          <Link to="/">Cosmic Logic 1</Link>
+          <Link to="/">Cosmic Coder 24</Link>
         </h1>
         <nav className={`md:flex space-x-6 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           <Link to="/" className="hover:underline transition-all ease-in-out duration-300 hover:text-indigo-200">Home</Link>

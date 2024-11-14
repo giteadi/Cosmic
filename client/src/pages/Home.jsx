@@ -29,10 +29,13 @@ function Home() {
       >
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-snug">
-            <span className="animated-slide">Be Unique</span> 
-            <span className="animated-slide delay-1"> with Cosmic</span> 
-            <span className="animated-slide delay-2"> Logic 1</span> 
-            <span className="animated-slide delay-3"> Software Services</span>
+            <span className="animated-slide">Cosmic Code </span> 
+            <span className="animated-slide delay-1"> </span> 
+            <span className="animated-slide delay-2">  </span> 
+            <span className="animated-slide delay-2"> Real </span> 
+            <span className="animated-slide delay-2">  </span> 
+
+            <span className="animated-slide delay-3">Impact</span>
           </h2>
           <p className="mt-4 text-lg sm:text-xl text-white">
             Empowering your business through innovation and creativity.
