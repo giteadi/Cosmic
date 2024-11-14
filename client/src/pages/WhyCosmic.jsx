@@ -57,7 +57,7 @@ const ServiceCard = styled.div`
 
   .service-icon {
     font-size: 3rem;
-    color: #ffffff; /* Updated to white */
+    color: #ffffff;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ff6f61, #8b1e2f);
     border-radius: 50%;
@@ -179,16 +179,47 @@ function WhyCosmic() {
   return (
     <section id="why-cosmic" className="py-16 bg-gray-900">
       <div className="container mx-auto px-4 text-center">
-        <GradientText>Why Cosmic Logic</GradientText>
+        <GradientText>Why Cosmic Coder 24?</GradientText>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-          {['Productivity', 'Agile Team', 'Best Services', 'Innovative Work', 'Affordable Price', 'Trusted Support'].map((benefit, index) => (
+          {[
+            {
+              title: 'Productivity',
+              description: 'At Cosmic Coder 24, we prioritize efficiency and productivity in every project, helping your team stay on track and hit deadlines without compromising quality.',
+              icon: icons[0],
+            },
+            {
+              title: 'Agile Team',
+              description: 'Our agile, cross-functional teams are designed to adapt quickly, ensuring your project evolves and scales smoothly as per changing requirements.',
+              icon: icons[1],
+            },
+            {
+              title: 'Best Services',
+              description: 'We offer a wide range of cutting-edge tech solutions that are tailored to meet your unique business needs, from web development to AI integration.',
+              icon: icons[2],
+            },
+            {
+              title: 'Innovative Work',
+              description: 'Innovation is at the heart of everything we do. We leverage the latest technologies to create forward-thinking solutions that set you apart from the competition.',
+              icon: icons[3],
+            },
+            {
+              title: 'Affordable Price',
+              description: 'Cosmic Coder 24 believes in providing high-quality solutions at competitive prices, ensuring you get the most value for your investment.',
+              icon: icons[4],
+            },
+            {
+              title: 'Trusted Support',
+              description: 'Our dedicated support team is always available to assist you, ensuring your systems run smoothly and efficiently, no matter what challenges arise.',
+              icon: icons[5],
+            },
+          ].map((service, index) => (
             <ServiceCard
               key={index}
               className={`service-card ${isInView[index] ? (index < 3 ? 'animate-right-to-left' : 'animate-left-to-right') : ''}`}
             >
-              <div className="service-icon">{icons[index]}</div>
-              <h3>{benefit}</h3>
-              <p>Description of why {benefit} is important. Highlight the advantages that Cosmic Logic provides through this feature.</p>
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </ServiceCard>
           ))}
         </div>
