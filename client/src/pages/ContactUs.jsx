@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';  // Import axios for API requests
+import { toast } from 'react-hot-toast';  // Import toast for notifications
 import bg from "../assets/blue-black-sky-with-stars.jpg";
 
 // Background container with responsive padding
@@ -41,14 +43,30 @@ const ContactPage = () => {
     projectDescription: ''
   });
 
+  const [loading, setLoading] = useState(false);  // For loading state
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
-    // Here you would typically send this data to a backend or database
+    setLoading(true);  // Set loading to true when the request starts
+
+    try {
+      const response = await axios.post('http://localhost:4000/api/v1/submit', formData);
+      console.log('Form Submitted:', response.data);
+
+      // Show success toast
+      toast.success('Form submitted successfully!');
+    } catch (err) {
+      console.error('Error submitting form:', err);
+
+      // Show error toast
+      toast.error('Failed to submit the form. Please try again later.');
+    } finally {
+      setLoading(false);  // Set loading to false when the request finishes
+    }
   };
 
   return (
@@ -116,8 +134,12 @@ const ContactPage = () => {
             />
           </div>
           <div>
-            <button type="submit" className="w-full bg-blue-600 py-2 px-6 rounded-lg text-white hover:bg-blue-700">
-              Submit Request
+            <button
+              type="submit"
+              className="w-full bg-blue-600 py-2 px-6 rounded-lg text-white hover:bg-blue-700"
+              disabled={loading}  // Disable button when loading
+            >
+              {loading ? 'Submitting...' : 'Submit Request'}
             </button>
           </div>
         </form>
